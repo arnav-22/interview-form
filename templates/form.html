@@ -1,0 +1,65 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Availability Form</title>
+</head>
+<body>
+    <h2>Candidate Availability Form</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li style="color:red;">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form action="/submit" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Job Position:</label><br>
+        <input type="text" name="job" required><br><br>
+
+        <label>Available Date:</label><br>
+        <select name="date" required>
+            <option value="April 9">April 9</option>
+            <option value="April 10">April 10</option>
+            <option value="April 11">April 11</option>
+            <option value="April 12">April 12</option>
+            <option value="April 13">April 13</option>
+            <option value="April 14">April 14</option>
+        </select><br><br>
+
+        <label>Choose Time Slot:</label><br>
+        <select name="time" required>
+            <option value="5:30 AM">5:30 AM</option>
+            <option value="7:30 AM">7:30 AM</option>
+            <option value="9:45 PM">9:45 PM</option>
+            <option value="10:45 PM">10:45 PM</option>
+        </select><br><br>
+
+        <label>Availability:</label><br>
+        <select name="availability" required>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+        </select><br><br>
+
+        <label>Hours you can spare:</label><br>
+        <input type="number" name="hours" required><br><br>
+
+        <label>Are you able to start from April 15?</label><br>
+        <select name="start" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
