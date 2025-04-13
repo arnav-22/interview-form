@@ -4,7 +4,7 @@ import pandas as pd
 import os
 import asyncio
 
-TOKEN = os.environ.get('MTM1OTYxNjU3OTQxMDg1Mzg4OA.GkoPvy.fBIqAAw7qDBSo7oO0j9mvJ10mlaBQJFnvpWUMU')  # Secure token storage for Render
+TOKEN = os.environ.get('DISCORD_TOKEN') # Secure token storage for Render
 EXCEL_FILE = 'availability.xlsx'
 
 intents = discord.Intents.default()
