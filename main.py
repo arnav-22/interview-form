@@ -56,7 +56,7 @@ def submit():
 
 
 # ---- DISCORD BOT SETUP ----
-TOKEN = os.environ.get('DISCORD_TOKEN')
+TOKEN = os.environ.get('MTM1OTYxNjU3OTQxMDg1Mzg4OA.GkoPvy.fBIqAAw7qDBSo7oO0j9mvJ10mlaBQJFnvpWUMU')
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
